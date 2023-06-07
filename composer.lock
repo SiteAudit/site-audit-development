@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "456538b7dab8bb60b93688c534ed34b7",
+    "content-hash": "0c6247c7e4f88186eb88c70351c634f6",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -1551,6 +1551,68 @@
                 "source": "https://github.com/drupal/core-recommended/tree/9.5.9"
             },
             "time": "2023-05-03T13:26:12+00:00"
+        },
+        {
+            "name": "drupal/site_audit",
+            "version": "dev-4.0.x",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/site_audit.git",
+                "reference": "403f6b301b63e1c2c3470d2dcdbd2184955d1943"
+            },
+            "require": {
+                "drupal/core": "^8 || ^9 || ^10"
+            },
+            "require-dev": {
+                "drupal/site_audit_report_entity": "*"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "branch-alias": {
+                    "dev-4.0.x": "4.0.x-dev"
+                },
+                "drupal": {
+                    "version": "4.0.0-beta1+0-dev",
+                    "datestamp": "1683892916",
+                    "security-coverage": {
+                        "status": "not-covered",
+                        "message": "Dev releases are not covered by Drupal security advisories."
+                    }
+                },
+                "drush": {
+                    "services": {
+                        "drush.services.yml": "^9 || ^10"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "James Glasgow",
+                    "homepage": "https://www.drupal.org/user/1386596",
+                    "email": "james@jrglasgow.com"
+                },
+                {
+                    "name": "Jon Pugh",
+                    "homepage": "https://www.drupal.org/user/17028"
+                },
+                {
+                    "name": "jrglasgow",
+                    "homepage": "https://www.drupal.org/user/36590"
+                },
+                {
+                    "name": "leymannx",
+                    "homepage": "https://www.drupal.org/user/2482808"
+                }
+            ],
+            "description": "This extension provides Site Audit commands for The Drupal UI and Drush.",
+            "homepage": "https://www.drupal.org/project/site_audit",
+            "support": {
+                "source": "https://git.drupalcode.org/project/site_audit"
+            }
         },
         {
             "name": "drush/drush",
@@ -10433,7 +10495,9 @@
     ],
     "aliases": [],
     "minimum-stability": "dev",
-    "stability-flags": [],
+    "stability-flags": {
+        "drupal/site_audit": 20
+    },
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {
