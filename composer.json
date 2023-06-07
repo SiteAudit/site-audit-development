@@ -1,12 +1,12 @@
 {
-    "name": "drupal-composer/drupal-project",
-    "description": "Project template for Drupal 9 projects with Composer",
+    "name": "drupal/site-audit-development",
+    "description": "Project template for Site Audit module development",
     "type": "project",
-    "license": "GPL-2.0-or-later",
+    "license": "MIT",
     "authors": [
         {
-            "name": "",
-            "role": ""
+            "name": "Site Audit Development Team",
+            "role": "developers"
         }
     ],
     "repositories": [
