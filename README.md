@@ -2,6 +2,8 @@
 
 This project provides a development environment for Site Audit and related modules.
 
+Join the development community in Drupal Slack: #site-audit-module
+
 ## Usage
 
 First you need to [install Composer](https://getcomposer.org/doc/00-intro.md#installation-linux-unix-osx).
@@ -45,4 +47,22 @@ Or you can use the meta commands `composer site:install` and `composer site:run`
 
 * Site Audit module is installed to web/modules/contrib/site_audit
 * Site Audit Server is installed to web/modules/contrib/site_audit_server
+
+
+# Development Process
+
+When you clone this project and composer install, the Site Audit and Site Audit Server modules
+will be cloned into `/web/modules/contrib` at the main branch, `4.0.x`.
+
+To develop the modules, create an issue fork.
+
+To put the forked module into this composer project, it is easier just to change the git remote than to use composer to alter the repo.
+
+        $ cd /path/to/clone
+        $ cd web/modules/contrib/site_audit
+        $ git remote set-url origin git@git.drupal.org:YOUR-ISSUE-FORK-URL.git
+        $ git fetch
+        $ git checkout YOUR-ISSUE-FORK-BRANCH.
+
+And start developing.
 
