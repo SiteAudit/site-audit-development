@@ -34,6 +34,7 @@
     "minimum-stability": "dev",
     "prefer-stable": true,
     "config": {
+        "bin-dir": "bin",
         "discard-changes": true,
         "sort-packages": true,
         "allow-plugins": {
@@ -61,6 +62,17 @@
         ],
         "post-update-cmd": [
             "DrupalProject\\composer\\ScriptHandler::createRequiredFiles"
+        ],
+        "site:install": [
+            "drush site:install --db-url=sqlite://web/sites/default/database.sql",
+            "drush uli --uri=siteaudit.local.computer"
+        ],
+        "site:run": [
+            "drush runserver siteaudit.local.computer:80"
+        ],
+        "site:launch": [
+            "@site:install",
+            "@site:run"
         ]
     },
     "extra": {
