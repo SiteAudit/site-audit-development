@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "0c6247c7e4f88186eb88c70351c634f6",
+    "content-hash": "cb8d3eed00e3f69c0e8a662514db9263",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -1553,6 +1553,123 @@
             "time": "2023-05-03T13:26:12+00:00"
         },
         {
+            "name": "drupal/key_auth",
+            "version": "2.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/key_auth.git",
+                "reference": "2.1.0"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/key_auth-2.1.0.zip",
+                "reference": "2.1.0",
+                "shasum": "0696410cf208628709e427d5923a028c01e8cfb4"
+            },
+            "require": {
+                "drupal/core": "^9.5 || ^10"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "2.1.0",
+                    "datestamp": "1676961258",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "Rajeshreeputra Pravin Dhondiba Gaikwad",
+                    "homepage": "https://www.drupal.org/u/Rajeshreeputra",
+                    "role": "Maintainer"
+                },
+                {
+                    "name": "Mike Stefanello",
+                    "homepage": "https://www.drupal.org/u/mstef",
+                    "role": "Maintainer"
+                },
+                {
+                    "name": "Dan Bryant",
+                    "homepage": "https://www.drupal.org/u/perfectcube",
+                    "role": "Maintainer"
+                },
+                {
+                    "name": "Ganesh Suryawanshi",
+                    "homepage": "https://www.drupal.org/u/ganeshsurya11",
+                    "role": "Maintainer"
+                }
+            ],
+            "description": "Provides simple key-based authentication on a per-user basis similar to basic_auth but without requiring usernames or passwords.",
+            "homepage": "https://www.drupal.org/project/key_auth",
+            "support": {
+                "source": "https://git.drupalcode.org/project/key_auth",
+                "issues": "https://www.drupal.org/project/issues/key_auth"
+            }
+        },
+        {
+            "name": "drupal/restui",
+            "version": "1.21.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/restui.git",
+                "reference": "8.x-1.21"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/restui-8.x-1.21.zip",
+                "reference": "8.x-1.21",
+                "shasum": "2a67dc2c1953dced0bddaff25e5c60784ee0178c"
+            },
+            "require": {
+                "drupal/core": "^8.7.7 || ^9 || ^10"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "8.x-1.21",
+                    "datestamp": "1659086914",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "-enzo-",
+                    "homepage": "https://www.drupal.org/user/294937"
+                },
+                {
+                    "name": "clemens.tolboom",
+                    "homepage": "https://www.drupal.org/user/125814"
+                },
+                {
+                    "name": "juampynr",
+                    "homepage": "https://www.drupal.org/user/682736"
+                },
+                {
+                    "name": "klausi",
+                    "homepage": "https://www.drupal.org/user/262198"
+                }
+            ],
+            "description": "Provides a user interface to manage REST resources.",
+            "homepage": "https://www.drupal.org/project/restui",
+            "support": {
+                "source": "https://git.drupalcode.org/project/restui"
+            }
+        },
+        {
             "name": "drupal/site_audit",
             "version": "dev-4.0.x",
             "source": {
@@ -1612,6 +1729,52 @@
             "homepage": "https://www.drupal.org/project/site_audit",
             "support": {
                 "source": "https://git.drupalcode.org/project/site_audit"
+            }
+        },
+        {
+            "name": "drupal/site_audit_server",
+            "version": "dev-4.0.x",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/site_audit_server.git",
+                "reference": "04e69e5b706a185a64fc5cf9fb622d9dc8ee4390"
+            },
+            "require": {
+                "drupal/core": "^9 || ^10",
+                "drupal/key_auth": "*",
+                "drupal/restui": "*",
+                "drupal/site_audit": "^4.0@dev",
+                "php": ">=5.6.0"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "branch-alias": {
+                    "dev-4.0.x": "4.0.x-dev"
+                },
+                "drupal": {
+                    "version": "4.0.0+3-dev",
+                    "datestamp": "1683912143",
+                    "security-coverage": {
+                        "status": "not-covered",
+                        "message": "Project has not opted into security advisory coverage!"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "Jon Pugh",
+                    "homepage": "https://www.drupal.org/user/17028",
+                    "email": "jon@thinkdrop.net"
+                }
+            ],
+            "description": "This extension provides a rest endpoint for receiving site audit entities.",
+            "homepage": "https://www.drupal.org/project/site_audit_server",
+            "support": {
+                "source": "https://git.drupalcode.org/project/site_audit_server"
             }
         },
         {
@@ -10496,7 +10659,8 @@
     "aliases": [],
     "minimum-stability": "dev",
     "stability-flags": {
-        "drupal/site_audit": 20
+        "drupal/site_audit": 20,
+        "drupal/site_audit_server": 20
     },
     "prefer-stable": true,
     "prefer-lowest": false,
